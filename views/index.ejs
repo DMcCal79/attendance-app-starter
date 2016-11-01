@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Attendance App</title>
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<link rel ="stylesheet" type="text/css" href = "/style.css">
+<body>
+<div class="attend">
+<h1>Today's Attendance</h1>
+<form method="POST" action="/names">
+  <input type="text" name="name">
+  <input type="submit" value="Submit">
+</form>
+<ul>
+<% names.forEach(function(name) { %>
+   <li><%= name.transformer %> - <%= name.attended %></li>
+   <% }) %>
+
+</ul>
+</div>
+
+
+
+
+
+</body>
+
+</head>
+</html>
