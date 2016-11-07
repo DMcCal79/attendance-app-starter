@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/names', names);
-app.use('/*', function(req, res, next) {
+app.get('/*', function(req, res, next) {
   res.redirect('/names');
 });
 
